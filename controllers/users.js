@@ -81,8 +81,8 @@ const logout = async (req, res) => {
 
 const currentUser = async (req, res, next) => {
   try {
-    const id = req.user._id;
-    const { name, email, subscription } = req.user;
+    // const id = req.user._id;
+    const { _id:id, name, email, subscription } = req.user;
     return res.status(OK).json({
       status: "success",
       code: OK,
