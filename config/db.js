@@ -22,9 +22,9 @@ if (process.env.NODE_ENV === "test") {
     console.log(`Mongoose connection error ${err.message}!`);
   });
 
-//   mongoose.connection.on("disconnected", () => {
-//     console.log("Database disconnected!");
-//   });
+  mongoose.connection.on("disconnected", () => {
+    console.log("Database disconnected!");
+  });
 }
 
 process.on("SIGINT", async () => {
